@@ -35,10 +35,8 @@
 
 #### Step 1 ####
 # Set the working directory automatically to the source file location 
-current_path <- getActiveDocumentContext()$path 
-setwd(dirname(current_path ))
-print( getwd() )
 
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
 #### Step 2 ####
 # Clear all objects and load the required packages
